@@ -57,15 +57,14 @@
             Grid.Row="1"
             Grid.Column="0"
             Width="125"
-            Margin="15,130,20,275"
+            Margin="15,45,20,360"
             Command="{Binding ViewModelBase.ClickCommand2}"
             Content="Click2" />
-
         <Button
             Grid.Row="1"
             Grid.Column="0"
             Width="125"
-            Margin="15,225,20,180"
+            Margin="15,70,20,335"
             Command="{Binding ViewModelBase.SaveCommand}"
             Content="Click3">
             <Button.CommandParameter>
@@ -77,26 +76,24 @@
                 </MultiBinding>
             </Button.CommandParameter>
         </Button>
-
         <TextBox
             x:Name="namentxt"
             Grid.Row="1"
             Grid.Column="0"
-            Margin="15,275,20,135"
+            Margin="15,100,20,305"
             Text="{Binding SaveModel.Name, Mode=TwoWay}" />
-
         <TextBox
             x:Name="vornametxt"
             Grid.Row="1"
             Grid.Column="0"
-            Margin="15,315,20,95"
+            Margin="15,130,20,275"
             Text="{Binding SaveModel.Vorname, Mode=TwoWay}" />
 
         <TextBox
             x:Name="agetext"
             Grid.Row="1"
             Grid.Column="0"
-            Margin="15,350,20,60"
+            Margin="15,160,20,245"
             KeyDown="agetext_KeyDown"
             PreviewTextInput="agetext_PreviewTextInput"
             Text="{Binding SaveModel.Age, Mode=TwoWay}" />
@@ -105,7 +102,7 @@
             x:Name="cmbxcountries"
             Grid.Row="1"
             Grid.Column="0"
-            Margin="15,390,20,20"
+            Margin="15,190,20,215"
             IsEnabled="True"
             IsReadOnly="False"
             IsTextSearchEnabled="True"

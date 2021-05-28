@@ -30,56 +30,39 @@ namespace WpfCommands.MVVM.ViewModel
         private string _title;
         public string Title
         {
-            get { return _title; }
-            set
-            {
-                SetPropertyValueToField(ref _title, value);
-            }
+            get => _title;
+            set => SetPropertyValueToField(ref _title, value);
         }
 
         private Brush _appbackground;
         public Brush AppBackground
         {
-            get
-            {
-                return _appbackground;
-            }
-            set
-            {
-                SetPropertyValueToField(ref _appbackground, value);
-            }
+            get => _appbackground;
+            set => SetPropertyValueToField(ref _appbackground, value);
         }
 
         private Brush _buttonBackground;
         public Brush ButtonBackground
         {
-            get
-            {
-                return _buttonBackground;
-            }
-            set
-            {
-                SetPropertyValueToField(ref _buttonBackground, value);
-            }
+            get => _buttonBackground;
+            set =>SetPropertyValueToField(ref _buttonBackground, value);
+            
         }
 
         private Brush _titleForeground;
 
         public Brush TitleForeground
         {
-            get { return _titleForeground; }
+            get => _titleForeground;
 
-            set
-            {
-                SetPropertyValueToField(ref _titleForeground, value);
-            }
+            set => SetPropertyValueToField(ref _titleForeground, value);
         }
 
         public MainViewModel()
         {
             _title = "VTE App ";
 
-            var color_title_background = (Color)ColorConverter.ConvertFromString("#00aba9");
+            Color color_title_background = (Color)ColorConverter.ConvertFromString("#00aba9");
 
             AppBackground = new SolidColorBrush(color_title_background);
 

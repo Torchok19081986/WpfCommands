@@ -22,9 +22,9 @@ namespace WpfCommands.MVVM.ViewModel
 
         public ICommand ClickCommand2 => _clickCommand2 ??= new RelayCommand(param => MyActionButton2(param), param => CanExecute);
 
-        public ICommand SaveCommand => _saveCommand ??= new RelayCommand(param => OnSaveexecute(param), param => CanExecute);
+        public ICommand SaveCommand => _saveCommand ??= new RelayCommand(param => OnSaveExecute(param), param => CanExecute);
 
-        public void OnSaveexecute(object param)
+        public void OnSaveExecute(object param)
         {
 
             SaveModel saveModel = new ();
