@@ -26,7 +26,7 @@ namespace WpfCommands.MVVM.ViewModel
 
         public ICommand SaveCommand => _saveCommand ??= new RelayCommand(param => OnSaveExecute(param), param => CanSaveExecute);
 
-        public ICommand TestCommand => _testCommand ??= new RelayCommand<string>((myString) => DoSomeStuff(myString), (myString) => CanDoSomeStuff(myString));
+        public ICommand TestCommand => _testCommand ??= new MyRelayCommand<string>((myString) => DoSomeStuff(myString), (myString) => CanDoSomeStuff(myString));
 
         public static bool CanDoSomeStuff(object parameter)
         {
@@ -95,7 +95,7 @@ namespace WpfCommands.MVVM.ViewModel
         }
 
     }
-    public class RelayCommand<T> : ICommand
+    public class MyRelayCommand<T> : ICommand
     {
 
         public event EventHandler CanExecuteChanged
@@ -107,7 +107,7 @@ namespace WpfCommands.MVVM.ViewModel
         private readonly Action<object> _execute;
         private readonly Func<object, bool> _canExecute;
 
-        public RelayCommand(Action<object> execute, Func<object, bool> canexecute)
+        public MyRelayCommand(Action<object> execute, Func<object, bool> canexecute)
         {
             _execute = execute;
             _canExecute = canexecute;

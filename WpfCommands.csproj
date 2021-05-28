@@ -10,4 +10,9 @@
     <Folder Include="MVVM\View\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="mahapps.metro" Version="2.4.5" />
+    <PackageReference Include="microsoft.toolkit.mvvm" Version="7.0.2" />
+  </ItemGroup>
+
 </Project>
