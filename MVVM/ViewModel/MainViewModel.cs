@@ -21,7 +21,7 @@ namespace WpfCommands.MVVM.ViewModel
 
         private ViewModelBase _viewModelBase;
 
-        public ViewModelBase  ViewModelBase
+        public ViewModelBase ViewModelBase
         {
             get => _viewModelBase;
             set => SetPropertyValueToField(ref _viewModelBase, value);
@@ -66,12 +66,12 @@ namespace WpfCommands.MVVM.ViewModel
 
             AppBackground = new SolidColorBrush(color_title_background);
 
-            //var color_button_background = (Color)ColorConverter.ConvertFromString("#6cd100");
-            //var Buttoncolor = new SolidColorBrush(color_button_background);
+            var color_button_background = (Color)ColorConverter.ConvertFromString("#6cd100");
+            var Buttoncolor = new SolidColorBrush(color_button_background);
 
-            //ButtonBackground = Buttoncolor;
+            ButtonBackground = Buttoncolor;
 
-            //TitleForeground = new SolidColorBrush(Colors.White);
+            TitleForeground = new SolidColorBrush(Colors.White);
 
             ViewModelBase = new ViewModelBase();
 

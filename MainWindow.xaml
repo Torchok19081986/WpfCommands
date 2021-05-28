@@ -50,6 +50,7 @@
             Grid.Column="0"
             Width="125"
             Margin="15,18,20,385"
+            Background="{Binding ButtonBackground}"
             Command="{Binding ViewModelBase.ClickCommand}">
             Click
         </Button>
@@ -58,6 +59,7 @@
             Grid.Column="0"
             Width="125"
             Margin="15,45,20,360"
+            Background="{Binding ButtonBackground}"
             Command="{Binding ViewModelBase.ClickCommand2}"
             Content="Click2" />
         <Button
@@ -65,8 +67,9 @@
             Grid.Column="0"
             Width="125"
             Margin="15,70,20,335"
+            Background="{Binding ButtonBackground}"
             Command="{Binding ViewModelBase.SaveCommand}"
-            Content="Click3">
+            Content="Save">
             <Button.CommandParameter>
                 <MultiBinding Converter="{StaticResource ResourceKey=appconverters}">
                     <Binding ElementName="namentxt" Path="Text" />
@@ -120,6 +123,5 @@
                 RU
             </ComboBoxItem>
         </ComboBox>
-
     </Grid>
 </Window>
