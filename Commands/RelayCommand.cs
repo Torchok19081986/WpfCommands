@@ -37,7 +37,9 @@ namespace WpfCommands.Commands
         
         public bool CanExecuteFunc(object parameter)
         {
-            return _canExecutefunc == null || _canExecute(parameter);
+            // return _canExecutefunc == null || _canExecute(parameter);
+
+            return true;
         }
         public bool CanExecute(object parameter)
         {
